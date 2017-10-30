@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ecommerce App', () => {
+describe('pokedex App', () => {
   let page: AppPage;
 
   beforeEach(() => {
