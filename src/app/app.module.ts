@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { PokemonService } from './pokemon-list/pokemon.service';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,13 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
     PokemonListComponent
   ],
   imports: [
+    HttpModule,
     NgbModule.forRoot(),
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    PokemonService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

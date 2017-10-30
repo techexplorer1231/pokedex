@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { PokemonService } from './pokemon.service';
+import { PokemonList } from './pokemon-list';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -6,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent implements OnInit {
+  pokemons: Observable<PokemonList[]>;
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
+    this.pokemons = this.pokemonService.getPokemons();
   }
 
 }
