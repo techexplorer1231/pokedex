@@ -6,7 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import { PokemonService } from './pokemon-list/pokemon.service';
+import { PokemonService } from './pokemon.service';
 
 @NgModule({
   declarations: [
